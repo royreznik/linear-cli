@@ -3,7 +3,7 @@ requires = ["hatchling"]
 build-backend = "hatchling.build"
 
 [project]
-name = "linear-cli"
+name = "linear-app-cli"
 version = "0.1.0"
 description = "A command-line interface for interacting with the Linear.app API"
 readme = "README.md"

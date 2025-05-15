@@ -19,7 +19,7 @@ A command-line interface for interacting with the Linear.app API.
 ### Using uv (recommended)
 
 ```bash
-uv pip install linear-cli
+uv pip install linear-app-cli
 ```
 
 ### From source
