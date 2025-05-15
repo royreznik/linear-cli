@@ -2,8 +2,8 @@
 
 A command-line interface for interacting with the Linear.app API.
 
-[![CI](https://github.com/yourusername/linear-cli/actions/workflows/ci.yml/badge.svg)](https://github.com/yourusername/linear-cli/actions/workflows/ci.yml)
-[![Publish](https://github.com/yourusername/linear-cli/actions/workflows/publish.yml/badge.svg)](https://github.com/yourusername/linear-cli/actions/workflows/publish.yml)
+[![CI](https://github.com/royreznik/linear-cli/actions/workflows/ci.yml/badge.svg)](https://github.com/royreznik/linear-cli/actions/workflows/ci.yml)
+[![Publish](https://github.com/royreznik/linear-cli/actions/workflows/publish.yml/badge.svg)](https://github.com/royreznik/linear-cli/actions/workflows/publish.yml)
 
 ## Features
 
@@ -25,7 +25,7 @@ uv pip install linear-cli
 ### From source
 
 ```bash
-git clone https://github.com/yourusername/linear-cli.git
+git clone https://github.com/royreznik/linear-cli.git
 cd linear-cli
 uv pip install -e .
 ```
@@ -120,7 +120,7 @@ linear me
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/yourusername/linear-cli.git
+git clone https://github.com/royreznik/linear-cli.git
 cd linear-cli
 ```
 
@@ -172,9 +172,11 @@ Please make sure your code passes all tests and linting checks.
 
 ## Releasing
 
-This project uses GitHub Actions to automatically build and publish the package to PyPI when a new release is created.
+This project uses GitHub Actions to automatically build and publish the package to PyPI when a new release is created or when manually triggered.
 
 ### Creating a Release
+
+#### Option 1: Create a GitHub Release
 
 1. Update the version in `pyproject.toml`
 2. Create a new tag with the version number:
@@ -184,6 +186,16 @@ This project uses GitHub Actions to automatically build and publish the package 
    ```
 3. Go to the GitHub repository and create a new release using the tag
 4. The GitHub Action will automatically build and publish the package to PyPI
+
+#### Option 2: Manual Dispatch
+
+1. Update the version in `pyproject.toml`
+2. Commit and push your changes
+3. Go to the GitHub repository's Actions tab
+4. Select the "Publish to PyPI" workflow
+5. Click "Run workflow"
+6. Enter the version number (e.g., 0.1.0) and click "Run workflow"
+7. The GitHub Action will build and publish the package to PyPI
 
 ### PyPI Configuration
 
