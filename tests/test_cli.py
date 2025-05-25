@@ -159,6 +159,7 @@ def mock_api_create_issue() -> Generator[mock.MagicMock, None, None]:
             created_at=datetime.fromisoformat("2023-01-03T00:00:00.000Z".replace("Z", "+00:00")),
             updated_at=datetime.fromisoformat("2023-01-03T00:00:00.000Z".replace("Z", "+00:00")),
             url="https://linear.app/team/issue/issue-3",
+            branch_name="linear/issue-3/new-issue",
         )
         yield mock_create_issue
 
@@ -302,6 +303,7 @@ def test_issues_create_success(runner: CliRunner, mock_api_create_issue: mock.Ma
     assert "Issue created successfully: New Issue" in result.stdout
     assert "ID: issue-id-3" in result.stdout
     assert "URL: https://linear.app/team/issue/issue-3" in result.stdout
+    assert "Branch name: linear/issue-3/new-issue" in result.stdout
     mock_api_create_issue.assert_called_once_with(
         title="New Issue",
         description="Description for New Issue",

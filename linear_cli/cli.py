@@ -338,6 +338,8 @@ def create_issue(
         console.print(f"[blue]ID:[/blue] {issue.id}")
         if issue.url:
             console.print(f"[blue]URL:[/blue] {issue.url}")
+        if issue.branch_name:
+            console.print(f"[blue]Branch name:[/blue] {issue.branch_name}")
     except api.AuthenticationError as e:
         console.print(f"[red]Authentication error: {str(e)}[/red]")
         raise typer.Exit(code=1) from e

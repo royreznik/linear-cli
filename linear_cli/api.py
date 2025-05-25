@@ -895,6 +895,7 @@ async def create_issue_async(
                 createdAt
                 updatedAt
                 url
+                branchName
             }
         }
     }
@@ -933,6 +934,7 @@ async def create_issue_async(
             created_at=issue_data["createdAt"],
             updated_at=issue_data["updatedAt"],
             url=issue_data.get("url"),
+            branch_name=issue_data.get("branchName"),
         )
     except (KeyError, ValidationError) as e:
         raise LinearAPIError(f"Failed to parse issue data: {str(e)}") from e

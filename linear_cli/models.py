@@ -61,7 +61,7 @@ class Project(BaseModel):
     team_ids: list[str] = Field(default_factory=list)
     lead_id: Optional[str] = None
     members_ids: list[str] = Field(default_factory=list)
-    
+
     # Computed fields for convenience
     url: Optional[str] = None
 
@@ -81,9 +81,10 @@ class Issue(BaseModel):
     creator_id: str
     created_at: datetime
     updated_at: datetime
-    
+
     # Computed fields for convenience
     url: Optional[str] = None
+    branch_name: Optional[str] = None
 
 
 class IssueConnection(BaseModel):
